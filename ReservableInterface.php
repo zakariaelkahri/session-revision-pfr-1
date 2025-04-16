@@ -239,14 +239,14 @@ interface ReservableInterface{
 		
 		public function rechercherVehiculeDisponible(string $type){
 		
-		
+		foreach($vehicules as $vehicule){
 			
-			if($voiture->getType() == $type){
-				
-				// foreach($vehicules as $vehicule)
+			if(->getType() == $type){
 				
 				
-			}elseif($moto->getType() == $type){
+				
+				
+			}elseif(getType() == $type){
 				
 				
 				
@@ -255,6 +255,7 @@ interface ReservableInterface{
 				
 				
 			}
+        }
 			
 	}
 	
