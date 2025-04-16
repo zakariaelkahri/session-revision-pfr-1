@@ -89,9 +89,9 @@ let candidatures =
         rejected++
       }
     })
-    console.log('En attente :${{pended}}' )
-    console.log('Validées :${validated}' )
-    console.log('Rejetées  :${rejected}' )
+    console.log(`En attente :${pended}` )
+    console.log(`Validées :${validated}` )
+    console.log(`Rejetées  :${rejected}` )
   }
   
 
