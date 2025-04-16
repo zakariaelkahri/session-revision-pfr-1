@@ -241,12 +241,10 @@ interface ReservableInterface{
 		
 		foreach($vehicules as $vehicule){
 			
-			if(->getType() == $type){
+			if($vehicule->getType() == $type){
 				
 				
-				
-				
-			}elseif(getType() == $type){
+			}elseif($vehicule->getType() == $type){
 				
 				
 				
