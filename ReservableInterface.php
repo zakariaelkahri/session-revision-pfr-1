@@ -243,6 +243,7 @@ interface ReservableInterface{
 			
 			if($vehicule->getType() == $type){
 				
+                $vehicule->afficherDetails();
 			
 			}
         }
