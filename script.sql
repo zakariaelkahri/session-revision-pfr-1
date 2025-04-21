@@ -10,14 +10,22 @@ where utilisateurs.role like 'freelance' and langues.nom like 'Anglais' and prof
 
 -- 2
 
-SELECT utilisateurs.nom as freelancer , competences.nom as competance_name ,COUNT(competences.nom) as competence_count from utilisateurs
+SELECT utilisateurs.nom as freelancer ,COUNT(competences.nom) as competence_count from utilisateurs
 join  profils on utilisateurs.id = profils.utilisateur_id
 join profil_competence on profils.id = profil_competence.profil_id
 join competences on profil_competence.competence_id = competences.id
-
-where utilisateurs.role like 'freelance'
-group BY freelancer , competance_name 
+where utilisateurs.role = 'freelance'
+group BY freelancer
 having competence_count > 3
+
+SELECT utilisateurs.nom AS freelancer, COUNT(competences.nom) AS competence_count
+FROM utilisateurs
+JOIN profils ON utilisateurs.id = profils.utilisateur_id
+JOIN profil_competence ON profils.id = profil_competence.profil_id
+JOIN competences ON profil_competence.competence_id = competences.id
+WHERE utilisateurs.role = 'freelance'
+GROUP BY freelancer
+HAVING competence_count > 3;
 
 -- 3
 
